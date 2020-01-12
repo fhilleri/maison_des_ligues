@@ -1,0 +1,171 @@
+html{
+	box-sizing: border-box;
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+	padding: 46px 0 72px 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+main{
+	padding: 8px;
+	overflow: hidden;
+}
+
+footer{
+	padding: 0px 8px 8px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: white;
+	box-sizing: border-box;
+}
+
+#logo_site{
+	max-height: 2.87em;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #5c5c5c;
+}
+
+.menu a{
+	display: block;
+	padding: 12px 15px;
+	color: white;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.menu li a{
+	transition: background-color 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.menu li a:hover:not(.current){
+	background-color: rgb(37, 37, 37);
+}
+
+.menu li a[class="current"]{
+	background-color: #ffb71d;
+}
+
+.menu li{
+	float: left;
+}
+
+.menu a.icon{
+	float: right;
+}
+
+.menu .icon{
+	display: none;
+}
+
+@media screen and (max-width: 740px) {
+	.menu li{
+		display: none;
+	}
+	.menu .icon{
+		display: block;
+	}
+	.menu.responsive .icon{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.menu.responsive li{
+		float: none;
+		display: block;
+	}
+	.menu.responsive #logo_site{
+		display: none;
+	}
+}
+
+h1{
+	margin-top: 0px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td{
+	padding: 10px;
+}
+
+thead{
+	background-color: #5c5c5c;
+	color : white;
+}
+
+select{
+	margin-top: 1em ;
+	/*display: inline ; */
+	margin-bottom: 2em ; 
+	/*box-sizing: border-box ;*/
+	height : 2em;
+}
+
+.button{
+	border-radius: 5px ;
+	padding: .5em ;
+	background: #5c5c5c ;
+	border: solid 1px #5c5c5c;
+	color : white;
+	font-weight: bold;
+	text-align : center;
+	font-size : 1em;
+	margin-top: 1em;
+	text-decoration: none;
+	display: inline-block;
+	
+}
+
+input{
+	margin-top: 1em; 
+	height : 2em; 
+	margin-bottom : 2em;
+}
+
+.formulaire{
+	text-align : center;
+}
+
+.liste li{
+	font-family: arial;
+	font-size: 1.2em;
+	line-height: 2;
+}
+
+.liste li a {
+	text-decoration: none;
+}
