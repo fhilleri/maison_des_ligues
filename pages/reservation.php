@@ -38,25 +38,24 @@
 		<!-- Contenu de la page -->
 		<main>
 			<h1>Formulaire de réservation</h1>
-			<div class="formulaire">
+			<form class="formulaire" action="/test.php" method="post">
 				<label>Salles :</label>
 				<div>
 				<select name="salles">
-					<option value="sal0">
-						- - -
-					</option>
-					<option value="sal1">
-						Bigorneaux
-					</option>
-					<option value="sal2">
-						Pascal Obispo
-					</option>
-					<option value="sal3">
-						Palmier
-					</option>
-					<option value="sal4">
-						Jeanne d'Arc
-					</option>
+
+					<?php
+						// Create connection
+						$pdo = new PDO("mysql:host=localhost;dbname=mdl", "root", "root" , array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+						$requete = "SELECT numSalle, nomSalle FROM SALLE";
+						$stmt = $pdo->query($requete);
+						foreach ($stmt as $donnee)
+						{
+							echo "<option value=" . $donnee["numSalle"] . ">";
+							echo $donnee["nomSalle"];
+							echo "</option>";
+						}
+					?>
+
 				</select>
 				</div>
 				
@@ -77,8 +76,8 @@
 				<input name="nom" type="text" placeholder="Votre nom" />
 				<br>
 				
-				<a href="" class="button">Réserver</a>	
-			</div>
+				<input class="button" type="submit" name="Submit">	
+			</form>
 		</main>
 
 
