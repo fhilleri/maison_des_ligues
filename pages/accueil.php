@@ -66,7 +66,7 @@
 				<img src="/PPE/img/handball.png">
 			</div>
 
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/mB2Vw3hhxnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block; margin-left:auto; margin-right:auto;"></iframe>
+			<iframe width="560" height="315" style="display:block; margin-left:auto; margin-right:auto; padding:20px;" src="https://www.youtube.com/embed/mB2Vw3hhxnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</main>
 
 		

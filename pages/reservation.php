@@ -25,7 +25,7 @@
 					<li><a href="/PPE/pages/accueil.php">Accueil</a></li>
 					<li><a href="/PPE/pages/annuaire_des_ligues.php">Annuaire des ligues</a></li>
 					<li><a href="/PPE/pages/formations.php">Formations</a></li>
-					<li><a class=current href="/PPE/pages/salles.php">Salles</a></li>
+					<li><a href="/PPE/pages/salles.php">Salles</a></li>
 					<li><a href="/PPE/pages/contacts.html">Contacts</a></li>
 					<a href="javascript:void(0);" class="icon" onclick="switchResponsive()">
 							<i class="fa fa-bars"></i>
@@ -38,10 +38,10 @@
 		<!-- Contenu de la page -->
 		<main>
 			<h1>Formulaire de réservation</h1>
-			<form class="formulaire" action="/test.php" method="post">
+			<form class="formulaire" action="/PPE/pages/validation_reservation.php" method="post">
 				<label>Salles :</label>
 				<div>
-				<select name="salles">
+				<select name="numSalle">
 
 					<?php
 						// Create connection
@@ -61,19 +61,19 @@
 				
 				<label>Date : </label>
 				<br>
-				<input type="date" name="date de réservation">
+				<input type="date" name="dateResa">
 				<br>
 				<label>Heure de début : </label>
 				<br>
-				<input type="time" name="debut">
+				<input type="time" name="HeureDbResa">
 				<br>
 				<label>Heure de fin : </label>
 				<br>
-				<input type="time" name="fin">
+				<input type="time" name="HeureFinResa">
 				<br>
 				<label>Nom : </label>
 				<br>
-				<input name="nom" type="text" placeholder="Votre nom" />
+				<input name="nomResa" type="text" placeholder="Votre nom" />
 				<br>
 				
 				<input class="button" type="submit" name="Submit">	
