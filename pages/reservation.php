@@ -61,19 +61,21 @@
 				
 				<label>Date : </label>
 				<br>
-				<input type="date" name="dateResa">
+				<div>
+				<input type="date" name="dateResa" required>
+				</div>
 				<br>
 				<label>Heure de début : </label>
 				<br>
-				<input type="time" name="HeureDbResa">
+				<input type="time" name="HeureDbResa" required>
 				<br>
 				<label>Heure de fin : </label>
 				<br>
-				<input type="time" name="HeureFinResa">
+				<input type="time" name="HeureFinResa" required>
 				<br>
 				<label>Nom : </label>
 				<br>
-				<input name="nomResa" type="text" placeholder="Votre nom" />
+				<input name="nomResa" type="text" placeholder="Votre nom" required maxlength="50"/>
 				<br>
 				
 				<input class="button" type="submit" name="Submit">	
