@@ -7,7 +7,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="/PPE/css/site.css" />
-		<link rel="icon" href="/PPE/img/m2l.png"/>
+		<link rel="icon" href="/PPE/img/m2l_sans_text_carre.png"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="/PPE/js/responsive_menu.js">
 		</script>
@@ -51,6 +51,16 @@
 					$data["HeureFinResa"] = htmlspecialchars($_POST["HeureFinResa"]);
 					$data["numSalle"] = htmlspecialchars($_POST["numSalle"]);
 					
+
+					/*SELECT reservation.numResa
+					FROM reservation
+					WHERE reservation.dateResa = "2020-01-16"
+						AND (reservation.HeureDbResa BETWEEN "00:00:00" AND "08:00:00"
+						OR reservation.HeureFinResa BETWEEN "00:00:00" AND "08:00:00"
+						OR "04:00:00" BETWEEN reservation.HeureDbResa AND reservation.HeureFinResa
+						OR "08:00:00" BETWEEN reservation.HeureDbResa AND reservation.HeureFinResa)*/
+
+
 					$pdo = new PDO("mysql:host=localhost;dbname=mdl", "root", "root" , array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 					$requete = "INSERT INTO reservation (numResa, nomResa, dateResa, HeureDbResa, HeureFinResa, numSalle) 
 						VALUES (NULL, :nomResa, :dateResa, :HeureDbResa, :HeureFinResa, :numSalle);";
