@@ -45,27 +45,48 @@
 				&& isset($_POST["HeureFinResa"]) && $_POST["HeureFinResa"] != ""
 				&& isset($_POST["numSalle"]) && $_POST["numSalle"] != "")
 				{
-					$data["nomResa"] = htmlspecialchars($_POST["nomResa"]);
-					$data["dateResa"] = htmlspecialchars($_POST["dateResa"]);
-					$data["HeureDbResa"] = htmlspecialchars($_POST["HeureDbResa"]);
-					$data["HeureFinResa"] = htmlspecialchars($_POST["HeureFinResa"]);
-					$data["numSalle"] = htmlspecialchars($_POST["numSalle"]);
-					
+					//Vérifie que l'heure de début est inferieur à l'heure de fin
+					date_default_timezone_set("Europe/Paris");
+					if (strtotime($_POST["HeureDbResa"]) >= strtotime($_POST["HeureFinResa"]))
+					{
+						$error = "L'heure de début ne peut pas être supérieure ou égale à l'heure de fin";
+					}
 
-					/*SELECT reservation.numResa
-					FROM reservation
-					WHERE reservation.dateResa = "2020-01-16"
-						AND (reservation.HeureDbResa BETWEEN "00:00:00" AND "08:00:00"
-						OR reservation.HeureFinResa BETWEEN "00:00:00" AND "08:00:00"
-						OR "04:00:00" BETWEEN reservation.HeureDbResa AND reservation.HeureFinResa
-						OR "08:00:00" BETWEEN reservation.HeureDbResa AND reservation.HeureFinResa)*/
-
-
-					$pdo = new PDO("mysql:host=localhost;dbname=mdl", "root", "root" , array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-					$requete = "INSERT INTO reservation (numResa, nomResa, dateResa, HeureDbResa, HeureFinResa, numSalle) 
-						VALUES (NULL, :nomResa, :dateResa, :HeureDbResa, :HeureFinResa, :numSalle);";
-					
-					if (!$pdo->prepare($requete)->execute($data)) $error =  "Erreur lors de la requête";
+					if ($error === "")
+					{
+						$pdo = new PDO("mysql:host=localhost;dbname=mdl", "root", "root" , array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+						
+						$requete = "SELECT reservation.numResa
+							FROM reservation
+							WHERE reservation.numSalle = :numSalle 
+							AND reservation.dateResa = :dateResa
+							AND (reservation.HeureDbResa >= :HeureDbResa AND HeureDbResa < :HeureFinResa
+							OR reservation.HeureFinResa > :HeureDbResa AND HeureFinResa <=  :HeureFinResa
+							OR :HeureDbResa >= reservation.HeureDbResa AND :HeureDbResa < reservation.HeureFinResa
+							OR :HeureFinResa > reservation.HeureDbResa AND :HeureFinResa <= reservation.HeureFinResa)";
+						
+						$reponse = $pdo->prepare($requete);
+						$reponse->execute(array("dateResa" => $_POST["dateResa"], "HeureDbResa" => $_POST["HeureDbResa"], "HeureFinResa" => $_POST["HeureFinResa"], "numSalle" => $_POST["numSalle"]));
+						$count = $reponse->rowCount();
+	
+						if ($count == 0)
+						{
+							$data["nomResa"] = htmlspecialchars($_POST["nomResa"]);
+							$data["dateResa"] = htmlspecialchars($_POST["dateResa"]);
+							$data["HeureDbResa"] = htmlspecialchars($_POST["HeureDbResa"]);
+							$data["HeureFinResa"] = htmlspecialchars($_POST["HeureFinResa"]);
+							$data["numSalle"] = htmlspecialchars($_POST["numSalle"]);
+							
+							$requete = "INSERT INTO reservation (numResa, nomResa, dateResa, HeureDbResa, HeureFinResa, numSalle) 
+								VALUES (NULL, :nomResa, :dateResa, :HeureDbResa, :HeureFinResa, :numSalle);";
+							
+							if (!$pdo->prepare($requete)->execute($data)) $error =  "Erreur lors de la requête";
+						}
+						else
+						{
+							$error = "Cette plage horaire est déjà réservée pour cette salle";
+						}
+					}
 				}
 				else $error = "Erreur : le formulaire est mal rempli";
 
@@ -73,7 +94,12 @@
 				{
 					echo "<h1>Votre réservation a bien été prise en compte</h1>";
 				}
-				else echo $error;
+				else 
+				{
+					echo "<h1>Votre réservation n'a pas été prise en compte";
+					echo "<h2>" . $error . "</h2>";
+					echo "<button type='button' class='button' onclick='window.history.back();'>Retourner à la réservation</button>";
+				}
 			?>
 
 		</main>
