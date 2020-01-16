@@ -70,9 +70,9 @@
 		<footer>
 			<!-- Pied de page -->
 			<hr style="margin-top:0">
-			<a href="" style="float:left">Facebook</a>
+			<a href="https://www.facebook.com/" target="_blank" style="float:left">Facebook</a>
 			<br>
-			<a href="" style="float:left">Twitter</a>
+			<a href="https://twitter.com/" style="float:left">Twitter</a>
 			<a href="/PPE/pages/Mentions.html" style="float:right">Mentions légales</a>
 		</footer>
 	</body>
