@@ -109,11 +109,10 @@
 		<footer>
 			<hr style="margin-top:0">
 			<!-- Pied de page -->
-			<a href="" style="float:left">Facebook</a>
-			<a href="" style="float:right">Favicons</a>
+			<a href="https://www.facebook.com/" target="_blank" style="float:left">Facebook</a>
 			<br>
-			<a href="" style="float:left">Twitter</a>
-			<a href="" style="float:right">Mentions légales</a>
+			<a href="https://twitter.com/" target="_blank" style="float:left">Twitter</a>
+			<a href=""style="float:right">Mentions légales</a>
 		</footer>
 	</body>
 </html>
