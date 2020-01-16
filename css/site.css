@@ -169,3 +169,7 @@ input{
 .liste li a {
 	text-decoration: none;
 }
+
+input.mail{
+	width: 25em;
+}

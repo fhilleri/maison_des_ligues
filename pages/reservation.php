@@ -77,7 +77,7 @@
 				<br>
 				<input name="nomResa" type="text" placeholder="Votre nom" required maxlength="50"/>
 				<br>
-				
+
 				<input class="button" type="submit" name="Submit">	
 			</form>
 		</main>
