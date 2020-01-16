@@ -79,10 +79,9 @@
 				echo "<br>"
 			?>
 			<a href="" style="float:left">Facebook</a>
-			<a href="" style="float:right">Favicons</a>
 			<br>
 			<a href="" style="float:left">Twitter</a>
-			<a href="" style="float:right">Mentions légales</a>
+			<a href="/PPE/pages/Mentions.html" style="float:right">Mentions légales</a>
 		</footer>
 	</body>
 </html>
