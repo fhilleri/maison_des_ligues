@@ -15,7 +15,7 @@
 
 	
 	<!-- contenus de la page HTML -->
-	<body>
+	<body id="dernieres-nouvelles">
 		<header>
 			<div class="menu" id="menu">
 				<!-- Entête -->
@@ -36,9 +36,8 @@
 
 
 		<!-- Contenu de la page -->
-		<main>
+		<main >
 			<h1>Annuaire des ligues</h1>
-			
 			<h3>Liste des ligues :</h3>
 
 			<?php
@@ -53,6 +52,8 @@
 				}
 				echo "</ul>";
 			?>
+            
+            <a class="button" href="#">revenir en haut </a>
 		</main>
 
 		<footer>

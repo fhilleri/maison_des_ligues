@@ -54,6 +54,7 @@
 
 		<!-- Contenu de la page -->
 		<main>
+   <div id="dernieres-nouvelles">...</div>
             <?php 
                     if(empty($error))
                     {
@@ -69,7 +70,7 @@
                     }
 			?>
 
-			
+		<a href="#dernieres-nouvelles">Les dernières nouvelles</a>
 		</main>
 
 		
@@ -77,6 +78,7 @@
 		<footer>
             <hr style="margin-top:0">
             <!-- Pied de page -->
+
             <a href="" style="float:left">Facebook</a>
             <a href="" style="float:right">Favicons</a>
             <br>

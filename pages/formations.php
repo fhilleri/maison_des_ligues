@@ -37,6 +37,7 @@
 
 		<!-- Contenu de la page -->
 		<main>
+            <div id="dernieres-nouvelles"></div>
 			<h1>Formations</h1>
 			
 			<h3>Liste des formations :</h3>
@@ -53,6 +54,7 @@
 				}
 				echo "</ul>";
 			?>
+             <a class="button" href="#">revenir en haut </a>
 		</main>
 
 
