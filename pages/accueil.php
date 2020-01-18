@@ -30,7 +30,7 @@
 		<link rel="stylesheet" href="/PPE/css/site.css" />
 		<link rel="icon" href="/PPE/img/m2l_sans_text_carre.png"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="/PPE/js/responsive_menu.js">
+		<script src="/PPE/js/scripts.js">
 		</script>
 	</head>
 
@@ -59,7 +59,7 @@
 		<main>
 			<h1>Bienvenue sur le site de la maison des ligues des pays de la loire </h1>
 			<p>La Maison des Ligues des pays de la loire (M2L) a pour mission de fournir des espaces et des services aux différentes ligues sportives régionales des pays de la loire et à d’autres structures hébergées. La M2L est une structure financée par le Conseil Régional des pays de la loire dont l'administration est déléguée au Comité Régional Olympique et Sportif des pays de la loire . Installée depuis 2003 dans la banlieue de cholet, la M2L accueille l'ensemble du mouvement sportif des pays de la loire qui représente près de 6 500 clubs, plus de 525 000 licenciés et près de 50 000 bénévoles.</p>
-			<div style="text-align: center">
+			<div style="display: flex; justify-content: space-around">
 				<img src="/PPE/img/judo.png">
 				<img src="/PPE/img/tennis.png">
 				<img src="/PPE/img/badminton.png">

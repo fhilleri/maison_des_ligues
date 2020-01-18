@@ -10,7 +10,10 @@ body{
 	font-family: Arial, Helvetica, sans-serif;
 	position: relative;
 
-	background-image: url(/PPE/img/degrade.jpg);
+	/*background: linear-gradient(#cecece 40%, #ffb71d 99%);
+	background-attachment: fixed;*/
+
+	background-image: url(/PPE/img/Background-website-01.jpg);
     background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -152,7 +155,7 @@ select{
 	margin-top: 1em;
 	text-decoration: none;
 	display: inline-block;
-	
+	height: auto;
 }
 
 input{
@@ -169,6 +172,7 @@ input{
 	font-family: arial;
 	font-size: 1.2em;
 	line-height: 2;
+	width: max-content;
 }
 
 .liste li a {
@@ -191,4 +195,15 @@ input.mail{
 
 hr {
 	border-color: black;
+}
+
+#flex_container{
+	display: flex;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 1060px) {
+	#flex_container{
+		flex-direction: column;
+	}
 }
