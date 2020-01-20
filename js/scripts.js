@@ -6,6 +6,7 @@ function submitForm(event)
     request.onload = function()
     {
         console.log(request.responseText);
+        
     }
 
     request.onerror = function()
