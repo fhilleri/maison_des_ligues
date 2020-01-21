@@ -55,7 +55,6 @@
 
 		<!-- Contenu de la page -->
 		<main>
-   <div id="dernieres-nouvelles">...</div>
             <?php 
                     if(empty($error))
                     {
@@ -70,8 +69,6 @@
                         echo "Erreur : " . $error;
                     }
 			?>
-
-		<a href="#dernieres-nouvelles">Les dernières nouvelles</a>
 		</main>
 
 		

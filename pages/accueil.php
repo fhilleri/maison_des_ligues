@@ -61,15 +61,31 @@
 			<h1>Bienvenue sur le site de la maison des ligues des pays de la loire </h1>
 			<p>La Maison des Ligues des pays de la loire (M2L) a pour mission de fournir des espaces et des services aux différentes ligues sportives régionales des pays de la loire et à d’autres structures hébergées. La M2L est une structure financée par le Conseil Régional des pays de la loire dont l'administration est déléguée au Comité Régional Olympique et Sportif des pays de la loire . Installée depuis 2003 dans la banlieue de cholet, la M2L accueille l'ensemble du mouvement sportif des pays de la loire qui représente près de 6 500 clubs, plus de 525 000 licenciés et près de 50 000 bénévoles.</p>
 			<div style="display: flex; justify-content: space-around; width:100%;">
-				<img class="resizable" src="/PPE/img/judo.png">
-				<img class="resizable" src="/PPE/img/tennis.png">
-				<img class="resizable" src="/PPE/img/badminton.png">
-				<img class="resizable" src="/PPE/img/handball.png">
+				<div class="image_container">
+					<div class="image_rationalizer">
+						<img class="responsive_element" src="/PPE/img/judo.png">
+					</div>
+				</div>
+				<div class="image_container">
+					<div class="image_rationalizer">
+						<img class="responsive_element" src="/PPE/img/tennis.png">
+					</div>
+				</div>
+				<div class="image_container">
+					<div class="image_rationalizer">
+						<img class="responsive_element" src="/PPE/img/badminton.png">
+					</div>
+				</div>
+				<div class="image_container">
+					<div class="image_rationalizer">
+						<img class="responsive_element" src="/PPE/img/handball.png">
+					</div>
+				</div>
 			</div>
 
 			<div class="video_container">
 				<div class="video_rationalizer">
-					<iframe width="560" height="315" style="display:block; margin-left:auto; margin-right:auto;" src="https://www.youtube.com/embed/mB2Vw3hhxnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="responsive_element" width="560" height="315" style="display:block; margin-left:auto; margin-right:auto;" src="https://www.youtube.com/embed/mB2Vw3hhxnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
             
