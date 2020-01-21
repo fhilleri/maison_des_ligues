@@ -16,6 +16,7 @@
 	
 	<!-- contenus de la page HTML -->
 	<body>
+		<div id="background"></div>
 		<header>
 			<div class="menu" id="menu">
 				<!-- Entête -->

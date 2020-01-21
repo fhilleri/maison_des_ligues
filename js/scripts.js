@@ -6,7 +6,7 @@ function submitForm(event)
     request.onload = function()
     {
         console.log(request.responseText);
-        
+        mailSendingCompleted();
     }
 
     request.onerror = function()
@@ -53,4 +53,16 @@ function initOSM()
     // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
     initMap(); 
     };
+}
+
+function mailSendingCompleted()
+{
+    var form = document.forms["form_mail"];
+    
+    for(var element of form.elements)
+    {
+        if (element.type != "submit") element.value = "";
+    }
+    
+    document.getElementById("sending_message").innerHTML = "Votre mail a bien été envoyé";
 }

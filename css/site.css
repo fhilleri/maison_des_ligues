@@ -9,14 +9,20 @@ body{
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	position: relative;
+}
 
-	/*background: linear-gradient(#cecece 40%, #ffb71d 99%);
-	background-attachment: fixed;*/
-
+#background{
 	background-image: url(/PPE/img/Background-website-01.jpg);
     background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	opacity: 0.7;
 }
 
 *,
@@ -72,7 +78,7 @@ footer{
 }
 
 .menu li a{
-	transition: background-color 0.3s;
+	transition: background-color 0.4s;
 	transition-timing-function: ease-in-out;
 }
 
