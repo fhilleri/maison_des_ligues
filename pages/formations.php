@@ -54,7 +54,7 @@
 				}
 				echo "</ul>";
 			?>
-             <a class="button" href="#">revenir en haut </a>
+             <a class="button" href="#">Revenir en haut </a>
 		</main>
 
 

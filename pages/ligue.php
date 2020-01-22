@@ -64,15 +64,18 @@
 					echo "<p>" . $donnee["Description"] . "</p>";
 					if (!empty($donnee["nomPre"])) echo "<b>Nom du président : </b>" . $donnee["nomPre"] . "<br>";
 					if (!empty($donnee["nomSecretaire"])) echo "<b>Nom du secrétaire : </b>" . $donnee["nomSecretaire"] . "<br>";
-					if (!empty($donnee["nomTresorier"])) echo "<b>Nom du trésorier : </b>" . $donnee["nomTresorier"] . "<br>";
+					if (!empty($donnee["nomTresorier"])) echo "<b>Nom du trésorier : </b>" . $donnee["nomTresorier"] . "<br><br>";
 
-					echo "<img src='/PPE/img/ligue/ligue_" . $numligue . ".png'>";
+					if (file_exists($_SERVER["DOCUMENT_ROOT"] . "PPE/img/ligue/ligue_" . $numligue . ".png")) echo "<img style='width: 100%; max-width: 250px; display: block;' src='/PPE/img/ligue/ligue_" . $numligue . ".png'>";
 				}
 				else
 				{
 					echo "Erreur : " . $error;
 				}
 			?>
+
+			<a href="/PPE/pages/annuaire_des_ligues.php" class="button">Retour</a>
+
 		</main>
 
 

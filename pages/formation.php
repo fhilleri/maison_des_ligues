@@ -20,7 +20,7 @@
 <html>
 	<!-- en-têtes de la page HTML -->
 	<head>
-		<title><?php echo (empty($error) ? $donnee["nomFormation"] : "Erreur");?></title>
+		<title><?php echo (empty($error) ? $donnee["nomForm"] : "Erreur");?></title>
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,13 +62,16 @@
                         echo "<h3>Description : </h3>";
 						echo "<p>" . $donnee["descriptif"] . "</p>";
 						
-						echo "<img src='/PPE/img/formation/formation_" . $numform . ".png'>";
-                    }
+						if (file_exists($_SERVER["DOCUMENT_ROOT"] . "PPE/img/formation/formation_" . $numform . ".png")) echo "<img style='width: 100%; max-width: 250px; display: block;' src='/PPE/img/formation/formation_" . $numform . ".png'>";
+					}
                     else
                     {
                         echo "Erreur : " . $error;
                     }
 			?>
+
+			<a href="/PPE/pages/formations.php" class="button">Retour</a>
+
 		</main>
 
 		

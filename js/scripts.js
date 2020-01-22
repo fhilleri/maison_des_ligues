@@ -48,6 +48,9 @@ function initOSM()
             minZoom: 5,
             maxZoom: 16,
         }).addTo(macarte);
+
+        var marker = L.marker([lat, lon]).addTo(macarte);
+        marker.bindPopup("Maison des ligues");
     }
     window.onload = function(){
     // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
